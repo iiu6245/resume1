@@ -87,18 +87,18 @@ var sct=0;
 $(window).on('scroll', function(){
     // var wh = $(this).height()
     sct = $(this).scrollLeft()
-    if ( sct>=sDist0 && sct<sDist1 && !cflag) {
+   if ( sct>=sDist0 && sct<sDist1 && !cflag) {
         $('#menu li').eq(0).addClass('on')
         $('#menu li').eq(0).siblings().removeClass('on')
         $('.skillContainer > div').find('.score').css({ width:'0%' })
         $('.skillContainer').removeClass('on')
         $('.bycicle').addClass('on')
+        $('#sect2 .paint').removeClass('on')
     } else if ( sct>=sDist1 && sct<sDist2 && !cflag) {
         $('.bycicle').removeClass('on')
         $('#menu li').eq(1).addClass('on')
         $('#menu li').eq(1).siblings().removeClass('on')
-        if ( !$('.skillContainer').hasClass('on') ) {
-            $('.skillContainer').addClass('on')
+        $('#sect2 .paint').addClass('on')
             count(70, '.html', 15)
             count(60, '.css', 16)
             count(80, '.script', 17)
